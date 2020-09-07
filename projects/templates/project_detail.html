@@ -5,7 +5,16 @@
 <h1>{{ project.title }}</h1>
 <div class="row">
     <div class="col-md-8">
-        <img src="{% static project.image %}" alt="" width=100%>
+        {% if project.title == 'Javascript Calculator' %}
+            <p class="codepen" data-height="693" data-theme-id="light" data-default-tab="result" data-user="ahphoo-the-scripter" data-slug-hash="WNwXjpM" style="height: 693px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Javascript Calculator">
+                <span>See the Pen <a href="https://codepen.io/ahphoo-the-scripter/pen/WNwXjpM">
+                Javascript Calculator</a> by ahphoo (<a href="https://codepen.io/ahphoo-the-scripter">@ahphoo-the-scripter</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        {% else %}
+            <img src="{% static project.image %}" alt="" width=100%>
+        {% endif %}
     </div>
     <div class="col-md-4">
         <h5>About the project:</h5>
